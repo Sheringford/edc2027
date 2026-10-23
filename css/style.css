@@ -44,18 +44,6 @@
     color: #CC5500; /* Orange Farbe, wenn man mit der Maus drüberfährt */
 }
 
-/* --- Einzelne "Seiten" --- */
-.page-section {
-    height: 100vh;
-    width: 100%;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    padding-top: 70px; 
-    /* WICHTIG: Die Hintergrundfarbe der Sektion muss zur Farbe 
-       des unteren Textbereichs passen, damit der Übergang nahtlos ist */
-    background-color: #f9f9f9; 
-}
 
 /* --- Abgedunkeltes Foto (Hero Image) --- */
 .hero-image {
@@ -86,18 +74,43 @@
     transform: translateY(-15px); 
 }
 
+/* --- Sanftes Scrollen für die gesamte Seite aktivieren --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Der Container braucht keine besonderen Scroll-Einschränkungen mehr */
+.scroll-container {
+    width: 100%;
+}
+
+/* --- Einzelne "Seiten" --- */
+.page-section {
+    /* WICHTIG: min-height statt height! 
+       Die Sektion ist mindestens einen Bildschirm hoch, wächst aber bei langem Text automatisch mit. */
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Platz für die Navbar */
+    background-color: #f9f9f9; 
+}
+
 /* --- Body der jeweiligen Seite --- */
 .page-content {
-    /* Nimmt automatisch den restlichen Platz ein (anstatt fester Höhe) */
     flex-grow: 1; 
     background-color: #f9f9f9;
-    
-    /* Das Padding nach oben verringern, da die Schräge schon Platz schafft */
     padding: 20px 10% 40px 10%; 
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    /* Der Scrollbalken (overflow-y) wurde hier komplett entfernt */
 }
 
 .page-content h2 {
