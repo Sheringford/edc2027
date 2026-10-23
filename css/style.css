@@ -59,7 +59,7 @@
 
 /* --- Abgedunkeltes Foto (Hero Image) --- */
 .hero-image {
-    height: 60vh; /* Deutlich höher (vorher 40vh) */
+    height: 45vh; /* Deutlich höher (vorher 40vh) */
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -80,10 +80,10 @@
 }
 
 .hero-image h1 {
-    font-size: 3.5rem; /* Etwas größer, da mehr Platz ist */
+    font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     /* Den Text leicht nach oben schieben, damit er optisch mittig über der Schräge sitzt */
-    transform: translateY(-20px); 
+    transform: translateY(-15px); 
 }
 
 /* --- Body der jeweiligen Seite --- */
