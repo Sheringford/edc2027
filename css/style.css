@@ -21,7 +21,7 @@
 }
 
 .logo {
-    color: black;
+    color: #000042;
     font-size: 24px;
     font-weight: bold;
 }
@@ -34,7 +34,7 @@
 }
 
 .nav-links a {
-    color: black;
+    color: #000042;
     text-decoration: none; /* Entfernt den blauen Unterstrich */
     font-size: 16px;
     font-weight: 500;
