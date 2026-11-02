@@ -1,8 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // --- Variables ---
     const sections = document.querySelectorAll(".page-section");
-    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(".nav-links a"); // The individual links
+    const mobileMenu = document.getElementById("mobile-menu");  // The hamburger button
+    const navLinksContainer = document.getElementById("nav-links"); // The ul container
 
-    // Listen for scrolling on the window, not the container
+    // --- 1. Hamburger Menu Toggle ---
+    if (mobileMenu && navLinksContainer) {
+        // Open/close the menu when the hamburger is clicked
+        mobileMenu.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("active");
+        });
+
+        // Close the dropdown menu automatically when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinksContainer.classList.remove("active");
+            });
+        });
+    }
+
+    // --- 2. Scroll Spy (Highlight active section) ---
     window.addEventListener("scroll", () => {
         let current = "";
 
