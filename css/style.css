@@ -159,6 +159,7 @@ body {
         padding: 0;
         background-color: white;
         z-index: 1000;  
+        gap: 0;
     }
 
     /* Class added by JavaScript to show the menu */
@@ -167,6 +168,6 @@ body {
     }
 
     .nav-links li {
-        margin: 15px 0;
+        margin: 10px 0;
     }
 }
