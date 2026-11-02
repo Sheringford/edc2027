@@ -110,7 +110,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* Der Scrollbalken (overflow-y) wurde hier komplett entfernt */
 }
 
 .page-content h2 {
@@ -125,4 +124,47 @@ body {
     color: #555;
     max-width: 800px;
     margin-bottom: 20px;
+}
+
+/* Style for the hamburger icon (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f9f9f9;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile styles applied when screen is 768px or smaller */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Class added by JavaScript to show the menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
 }
