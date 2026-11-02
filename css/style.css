@@ -137,7 +137,7 @@ body {
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #000042;
     margin: 3px 0;
     transition: 0.3s;
 }
